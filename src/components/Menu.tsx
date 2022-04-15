@@ -38,7 +38,6 @@ export const Menu = () => {
     address: "",
     age: "",
     profession: "",
-    interestRate: "",
   };
 
   const [users, setUsers] = useState(defaultUsers);
@@ -231,18 +230,7 @@ export const Menu = () => {
                     placeholder="Enter Profession"
                   />
                 </Form.Group>
-                <Form.Group className="mb-3">
-                  <Form.Label>Sport Interest Rate</Form.Label>
-                  <Form.Select
-                    value={newUser.interestRate}
-                    onChange={(e) =>
-                      setNewUser({ ...newUser, interestRate: e.target.value })
-                    }
-                  >
-                    <option value="">Select</option>
-                   
-                  </Form.Select>
-                </Form.Group>
+             
               </Modal.Body>
               <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
