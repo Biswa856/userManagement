@@ -3,7 +3,7 @@ export interface BaseUser {
   address: string;
   age:  string;
   profession: string;
-  interestRate: string
+  
 }
 export interface User extends BaseUser {
   id: number;

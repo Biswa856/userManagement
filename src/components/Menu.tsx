@@ -22,7 +22,6 @@ export const Menu = () => {
       address: "westBengal",
       age: "23",
       profession: "Software Engineer",
-      interestRate: "4",
     },
     {
       id: 2,
@@ -30,7 +29,6 @@ export const Menu = () => {
       address: "Malda",
       age: "24",
       profession: "Software Engineer",
-      interestRate: "5",
     },
   ];
 
@@ -48,7 +46,6 @@ export const Menu = () => {
   const [newUser, setNewUser] = useState(initCurrentUser);
   const [showCreateBtn, setShowCreateBtn] = useState(true);
   const [editing, setEdit] = useState(false);
-  const [rates, setRates] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
   const handleClose = () => {
     setShow(false);   
@@ -132,7 +129,6 @@ export const Menu = () => {
                     <th>Address</th>
                     <th>Age</th>
                     <th>Profession</th>
-                    <th>Sport Interest Rate</th>
                     <th>Actions</th>
                   </tr>
                 </thead>
@@ -145,7 +141,6 @@ export const Menu = () => {
                         <td>{user.address}</td>
                         <td>{user.age}</td>
                         <td>{user.profession}</td>
-                        <td>{user.interestRate}</td>
                         <td>
                           <Button
                             variant="info"
@@ -245,13 +240,7 @@ export const Menu = () => {
                     }
                   >
                     <option value="">Select</option>
-                    {rates.length
-                      ? rates.map((val, index) => (
-                          <option key={index} value={val}>
-                            {val}
-                          </option>
-                        ))
-                      : null}
+                   
                   </Form.Select>
                 </Form.Group>
               </Modal.Body>
